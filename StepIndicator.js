@@ -80,9 +80,7 @@ export default class StepIndicator extends Component {
         ]}
       >
         {this.state.width !== 0 && this.renderProgressBarBackground()}
-        <View style={reversed ? { transform: [{ rotate: "180deg" }] } : {}}>
-          {this.state.width !== 0 && this.renderProgressBar()}
-        </View>
+        {this.state.width !== 0 && this.renderProgressBar()}
         {this.renderStepIndicator()}
         {labels && this.renderStepLabels()}
       </View>
@@ -197,10 +195,12 @@ export default class StepIndicator extends Component {
 
       if (reversed) {
         progressBarStyle.bottom =
-          (this.state.height - this.state.customStyles.separatorStrokeWidth) / 2;
+          (this.state.height - this.state.customStyles.separatorStrokeWidth) /
+          2;
       } else {
         progressBarStyle.top =
-          (this.state.height - this.state.customStyles.separatorStrokeWidth) / 2;
+          (this.state.height - this.state.customStyles.separatorStrokeWidth) /
+          2;
       }
     }
     return <Animated.View style={progressBarStyle} />;
@@ -249,7 +249,7 @@ export default class StepIndicator extends Component {
               }
         ]}
       >
-        {steps}
+        {reversed ? steps.reverse() : steps}
       </View>
     );
   };
@@ -316,7 +316,7 @@ export default class StepIndicator extends Component {
           { alignItems: this.state.customStyles.labelAlign }
         ]}
       >
-        {labelViews}
+        {reversed ? labelViews.reverse() : labelViews}
       </View>
     );
   };
