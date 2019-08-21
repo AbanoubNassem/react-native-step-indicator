@@ -174,10 +174,10 @@ export default class StepIndicator extends Component {
       };
       if (reversed) {
         progressBarStyle.right =
-          (this.state.width - this.state.configs.separatorStrokeWidth) / 2;
+          (this.state.width - this.state.customStyles.separatorStrokeWidth) / 2;
       } else {
         progressBarStyle.left =
-          (this.state.width - this.state.configs.separatorStrokeWidth) / 2;
+          (this.state.width - this.state.customStyles.separatorStrokeWidth) / 2;
       }
     } else {
       progressBarStyle = {
@@ -197,10 +197,10 @@ export default class StepIndicator extends Component {
 
       if (reversed) {
         progressBarStyle.bottom =
-          (this.state.height - this.state.configs.separatorStrokeWidth) / 2;
+          (this.state.height - this.state.customStyles.separatorStrokeWidth) / 2;
       } else {
         progressBarStyle.top =
-          (this.state.height - this.state.configs.separatorStrokeWidth) / 2;
+          (this.state.height - this.state.customStyles.separatorStrokeWidth) / 2;
       }
     }
     return <Animated.View style={progressBarStyle} />;
@@ -241,11 +241,11 @@ export default class StepIndicator extends Component {
           direction === "vertical"
             ? {
                 flexDirection: reversed ? "column-reverse" : "column",
-                width: this.state.configs.currentStepIndicatorSize
+                width: this.state.customStyles.currentStepIndicatorSize
               }
             : {
                 flexDirection: reversed ? "row-reverse" : "row",
-                height: this.state.configs.currentStepIndicatorSize
+                height: this.state.customStyles.currentStepIndicatorSize
               }
         ]}
       >
@@ -313,7 +313,7 @@ export default class StepIndicator extends Component {
                 flexDirection: reversed ? "row-reverse" : "row",
                 paddingVertical: 4
               },
-          { alignItems: this.state.configs.labelAlign }
+          { alignItems: this.state.customStyles.labelAlign }
         ]}
       >
         {labelViews}

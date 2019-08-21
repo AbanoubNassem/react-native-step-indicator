@@ -3,197 +3,197 @@
 // Definitions by: Kyle Roach <https://github.com/iRoachie>
 // TypeScript Version: 2.3.3
 
-import React from 'react'
+import React from "react";
 
 interface StepIndicatorStyles {
   /**
    * Size of step indicator circle
-   * 
+   *
    * @default 30
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorSize?: number
+  stepIndicatorSize?: number;
 
   /**
    * Size of the current step indicator circle
-   * 
+   *
    * @default 40
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  currentStepIndicatorSize?: number
+  currentStepIndicatorSize?: number;
 
   /**
    * Stroke thickness of the separator between steps
-   * 
+   *
    * @default 2
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  separatorStrokeWidth?: number
+  separatorStrokeWidth?: number;
 
   /**
    * Thickness of the stroke around each step
-   * 
+   *
    * @default 3
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  stepStrokeWidth?: number
+  stepStrokeWidth?: number;
 
   /**
    * Thickness of the stroke around the current step
-   * 
+   *
    * @default 3
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  currentStepStrokeWidth?: number
+  currentStepStrokeWidth?: number;
 
   /**
-   * Stroke color for the current step 
-   * 
+   * Stroke color for the current step
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepStrokeCurrentColor?: string
+  stepStrokeCurrentColor?: string;
 
   /**
    * Stroke color for finished steps
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepStrokeFinishedColor?: string
+  stepStrokeFinishedColor?: string;
 
   /**
    * Stroke color for unfinished steps
-   * 
+   *
    * @default '#aaaaaa'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepStrokeUnFinishedColor?: string
+  stepStrokeUnFinishedColor?: string;
 
   /**
    * Color of separator for finished items
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  separatorFinishedColor?: string
+  separatorFinishedColor?: string;
 
   /**
    * Color of separator for unfinished items
-   * 
+   *
    * @default '#aaaaaa'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  separatorUnFinishedColor?: string
+  separatorUnFinishedColor?: string;
 
   /**
    * Color of the circle for finished steps
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorFinishedColor?: string
+  stepIndicatorFinishedColor?: string;
 
   /**
    * Color of the circle for unfinished steps
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorUnFinishedColor?: string
+  stepIndicatorUnFinishedColor?: string;
 
   /**
    * Color of the circle for the current step
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorCurrentColor?: string
+  stepIndicatorCurrentColor?: string;
 
   /**
-   * Font size of the number inside the circle for each step 
+   * Font size of the number inside the circle for each step
    *
    * @default 15
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorLabelFontSize?: number
+  stepIndicatorLabelFontSize?: number;
 
   /**
    * Font size of the number inside the circle for the current step
-   * 
+   *
    * @default 15
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  currentStepIndicatorLabelFontSize?: number
+  currentStepIndicatorLabelFontSize?: number;
 
   /**
    * Color of label for the current step
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorLabelCurrentColor?: string
+  stepIndicatorLabelCurrentColor?: string;
 
   /**
    * Color of labels that their steps are finished
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorLabelFinishedColor?: string
+  stepIndicatorLabelFinishedColor?: string;
 
   /**
    * Color of labels that their steps are unfinished
-   * 
+   *
    * @default 'rgba(255,255,255,0.5)'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  stepIndicatorLabelUnFinishedColor?: string
+  stepIndicatorLabelUnFinishedColor?: string;
 
   /**
    * Color of the label text
-   * 
+   *
    * @default '#000000'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  labelColor?: string
+  labelColor?: string;
 
   /**
    * Color of the current step label
-   * 
+   *
    * @default '#4aae4f'
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  currentStepLabelColor?: string
+  currentStepLabelColor?: string;
 
   /**
    * Font size for the labels
-   * 
+   *
    * @default 13
    * @type {number}
    * @memberof StepIndicatorStyles
    */
-  labelSize?: number
+  labelSize?: number;
 
   /**
    * Label alignment
@@ -203,7 +203,7 @@ interface StepIndicatorStyles {
    * @memberof StepIndicatorStyles
    *
    */
-  labelAlign?: string
+  labelAlign?: string;
 
   /**
    * Label fontFamily for custom fonts
@@ -212,84 +212,96 @@ interface StepIndicatorStyles {
    * @memberof StepIndicatorStyles
    *
    */
-  labelFontFamily?: string
+  labelFontFamily?: string;
 }
 
 interface StepIndicatorProps {
   /**
    * Current step
-   * 
+   *
    * @default 0
    * @type {number}
    * @memberof StepIndicatorProps
    */
-  currentPosition?: number
+  currentPosition?: number;
 
   /**
    * Number of steps
-   * 
+   *
    * @default 5
    * @type {number}
    * @memberof StepIndicatorProps
    */
-  stepCount?: number
+  stepCount?: number;
 
   /**
    * Orientation of the Steps
-   * 
+   *
    * @default 'horizontal'
    * @type {('horizontal' | 'vertical')}
    * @memberof StepIndicatorProps
    */
-  direction?: 'horizontal' | 'vertical'
+  direction?: "horizontal" | "vertical";
 
   /**
    * Styles for the component
-   * 
+   *
    * @type {StepIndicatorStyles}
    * @memberof StepIndicatorProps
    */
-  customStyles?: StepIndicatorStyles
+  customStyles?: StepIndicatorStyles;
 
   /**
-   * Labels for each step	
-   * 
+   * Labels for each step
+   *
    * @type {string[]}
    * @memberof StepIndicatorProps
    */
-  labels?: string[]
+  labels?: string[];
+
+  reversed?: boolean;
 
   /**
    * Callback fired when tapping on a step
-   * 
-   * @param {number} step 
-   * 
+   *
+   * @param {number} step
+   *
    * @memberof StepIndicatorProps
    */
-  onPress?(step: number): void
+  onPress?(step: number): void;
 
   /**
-  * Used to render custom content inside step at specified position
-  * 
-  * @param {number} position 
-  * @param {string} stepStatus 
-  * 
-  * @memberof StepIndicatorProps
-  */
-  renderStepIndicator?(args: { position: number, stepStatus: string }): React.ReactNode
+   * Used to render custom content inside step at specified position
+   *
+   * @param {number} position
+   * @param {string} stepStatus
+   *
+   * @memberof StepIndicatorProps
+   */
+  renderStepIndicator?(args: {
+    position: number;
+    stepStatus: string;
+  }): React.ReactNode;
 
   /**
-  * Use this to render custom label for each step
-  * 
-  * @param {number} position 
-  * @param {string} stepStatus 
-  * @param {string} label 
-  * @param {number} currentPosition 
-  * 
-  * @memberof StepIndicatorProps
-  */
-  renderLabel?(args: { position: number, stepStatus: string, label: string, currentPosition: number }): React.ReactNode
-
+   * Use this to render custom label for each step
+   *
+   * @param {number} position
+   * @param {string} stepStatus
+   * @param {string} label
+   * @param {number} currentPosition
+   *
+   * @memberof StepIndicatorProps
+   */
+  renderLabel?(args: {
+    position: number;
+    stepStatus: string;
+    label: string;
+    currentPosition: number;
+  }): React.ReactNode;
 }
 
-export default class StepIndicator extends React.Component<StepIndicatorProps, {}> { }
+export default class StepIndicator extends React.Component<
+  StepIndicatorProps,
+  {}
+> {}
